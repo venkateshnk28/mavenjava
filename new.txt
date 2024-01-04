@@ -6,11 +6,10 @@ pipeline{
     stages{
        stage('Clone Code'){
             steps{
-                git branch: "master" , 'https://github.com/venkateshnk28/mavenjava.git'
+                git 'https://github.com/venkateshnk28/mavenjava.git'
             }
          }        
-       stage('Build '){
-       de
+       stage('Build'){
             steps{
                 sh 'mvn clean install'
             }
